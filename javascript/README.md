@@ -1,5 +1,10 @@
 # Data Structures and Algorithms
 
+
+# Table Content
+
+[Click here to enter reverse array](https://github.com/WalidAlrefai/data-structures-and-algorithms/tree/main/javascript/array%20reverse)
+
 ## Language: `JavaScript`
 
 ### Folder and Challenge Setup
