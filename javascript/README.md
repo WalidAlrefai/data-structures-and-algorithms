@@ -3,7 +3,7 @@
 
 # Table Content
 
- | [Click here to enter reverse array](https://github.com/WalidAlrefai/data-structures-and-algorithms/tree/main/javascript/array%20reverse) |
+ | [Click here to enter reverse array](https://github.com/WalidAlrefai/data-structures-and-algorithms/tree/main/javascript/array%20reverse) | [Click here to enter inser tShift Array](https://github.com/WalidAlrefai/data-structures-and-algorithms/blob/main/javascript/array-insert-shift/README.md)|
 
 ## Language: `JavaScript`
 
