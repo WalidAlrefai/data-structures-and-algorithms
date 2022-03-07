@@ -42,4 +42,46 @@ describe('Linked List', () => {
     link.insert('A');
     expect(link.toString()).toBe('{A} ->{B} ->{C} ->Null');
   });
+  it('insert to empty LL', () => {
+    const link = new LinkedLilst();
+    link.append('A');
+    expect(link.head.value).toEqual('A');
+    expect(link.head.next).toBeNull();
+  });
+  it('test insert to LL if not empty', () => {
+    const link = new LinkedLilst();
+    link.append('A');
+    link.append('B');
+    expect(link.head.value).toBe('A');
+    expect(link.head.next.value).toBe('B');
+    expect(link.head.next.next).toBe(null);
+  });
+  it('test insert before ',()=>{
+    const link = new LinkedLilst();
+    link.append('A');
+    link.append('B');
+    link.append('C');
+    // console.log(link.toString());
+    link.insertBefore('C','D');
+    console.log(link.toString());
+    expect(link.head.value).toBe('A');
+    expect(link.head.next.value).toBe('B');
+    expect(link.head.next.next.value).toBe('D');
+    expect(link.head.next.next.next.value).toBe('C');
+    expect(link.head.next.next.next.next).toBe(null);
+  });
+  it('test insert before ',()=>{
+    const link = new LinkedLilst();
+    link.append('A');
+    link.append('B');
+    link.append('C');
+    // console.log(link.toString());
+    link.insertAfter('B','E');
+    console.log(link.toString());
+    expect(link.head.value).toBe('A');
+    expect(link.head.next.value).toBe('B');
+    expect(link.head.next.next.value).toBe('E');
+    expect(link.head.next.next.next.value).toBe('C');
+    expect(link.head.next.next.next.next).toBe(null);
+  });
 });

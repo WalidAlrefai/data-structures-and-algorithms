@@ -15,6 +15,46 @@ class LinkedList {
     }
   }
 
+  append(value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+    } else {
+      let currentNode = this.head;
+      while (currentNode.next) {
+        currentNode = currentNode.next;
+      }
+      currentNode.next = node;
+    }
+  }
+
+  insertBefore(perValue, newVal) {
+    const node = new Node(newVal);
+    let currentNode = this.head;
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+      if (currentNode.next.value == perValue) {
+        node.next =currentNode.next;
+        currentNode.next =node;
+        return null;
+      }
+    }
+  }
+
+  insertAfter(perValue, newVal) {
+    const node = new Node(newVal);
+    let currentNode = this.head;
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+      if (currentNode.value == perValue) {
+        node.next =currentNode.next;
+        currentNode.next =node;
+        return null;
+      }
+    }
+  }
+
+
   include(value) {
     let current = this.head;
     if (current.value === value) return true;
@@ -40,7 +80,8 @@ class LinkedList {
     return result;
   }
 
+
+
+
 }
-
-
 module.exports = LinkedList;
