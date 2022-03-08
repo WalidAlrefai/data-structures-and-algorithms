@@ -2,7 +2,18 @@
 Create Three function one for insert in the end of linked list second one insert before specific node third one insert after specific node.
 
 ## Whiteboard Process
-![](/linked-list/Linked-list-insertion.png)
+### Append
+
+![](./Linked-list-insertion.png)
+
+### Insert Before
+
+![](./Insert-before.png)
+
+### Insert After
+
+![](./Insert-After.png)
+
 
 ## Approach & Efficiency
 
