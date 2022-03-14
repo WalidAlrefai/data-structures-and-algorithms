@@ -34,8 +34,8 @@ class LinkedList {
     while (currentNode.next) {
       currentNode = currentNode.next;
       if (currentNode.next.value == perValue) {
-        node.next =currentNode.next;
-        currentNode.next =node;
+        node.next = currentNode.next;
+        currentNode.next = node;
         return null;
       }
     }
@@ -47,8 +47,8 @@ class LinkedList {
     while (currentNode.next) {
       currentNode = currentNode.next;
       if (currentNode.value == perValue) {
-        node.next =currentNode.next;
-        currentNode.next =node;
+        node.next = currentNode.next;
+        currentNode.next = node;
         return null;
       }
     }
@@ -81,6 +81,31 @@ class LinkedList {
   }
 
 
+  reverse() {
+    let link = new LinkedList();
+    let current = this.head;
+    while (current) {
+      link.insert(current.value);
+      current = current.next;
+    }
+    return link;
+  }
+
+
+  isPalindrome() {
+    let reversedList = this.reverse();
+    let current = this.head;
+    let current2 = reversedList.head;
+    while (current) {
+      if (current.value === current2.value) {
+        current = current.next;
+        current2 = current2.next;
+      }else{
+        return false;
+      }
+    }
+    return true;
+  }
 
 
 }

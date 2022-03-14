@@ -84,4 +84,26 @@ describe('Linked List', () => {
     expect(link.head.next.next.next.value).toBe('C');
     expect(link.head.next.next.next.next).toBe(null);
   });
+  it('test isPalindrome ',()=>{
+    const link = new LinkedLilst();
+    link.insert('A');
+    link.insert('B');
+    link.insert('A');
+    // link.append('A');
+
+
+    expect(link.isPalindrome()).toBe(true);
+  });
+  it('testing reverse method:',()=>{
+    const link = new LinkedLilst();
+
+    link.insert(6);
+    link.insert(5);
+    link.insert(4);
+    link.insert(3);
+    link.insert(2);
+    link.insert(1);
+
+    expect(link.reverse().toString()).toBe('{6} ->{5} ->{4} ->{3} ->{2} ->{1} ->Null');
+  });
 });
