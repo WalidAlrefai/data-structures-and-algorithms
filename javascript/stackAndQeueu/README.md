@@ -1,9 +1,9 @@
 # Stacks and Queues
 
 ## Stacks
-it is data structure to store data the system of stack is last in first out.
+it is data structure to store data the system of stack is last in last out.
 ## Queue
-it is data structure to store data the system of stack is first in last out.
+it is data structure to store data the system of stack is first in first out.
 
 ## Challenge
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
