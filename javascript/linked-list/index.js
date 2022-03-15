@@ -4,6 +4,7 @@ const Node = require('./node');
 class LinkedList {
   constructor() {
     this.head = null;
+    this.length = 0;
   }
   insert(value) {
     const node = new Node(value);
@@ -25,6 +26,7 @@ class LinkedList {
         currentNode = currentNode.next;
       }
       currentNode.next = node;
+      this.length++;
     }
   }
 
