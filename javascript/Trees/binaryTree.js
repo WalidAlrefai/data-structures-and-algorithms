@@ -34,6 +34,21 @@ class binaryTree {
     postOrderRec(this.root);
     return arr;
   }
+  isEmpty() {
+    return this.root === null;
+  }
+  findMax() {
+    if (this.isEmpty()) return "empty";
+    if(typeof this.root.value !== "number") return 'not a number';
+    let array = this.inOrder();
+    let max = 0;
+    for (let i = 0; i < array.length; i++) {
+      if(array[i] > max){
+        max = array[i];
+      }
+    }
+    return max;
+  }
 }
 class BST extends binaryTree {
   constructor() {
