@@ -62,6 +62,24 @@ describe('Binary Tree', () => {
 
 
   });
+  it('breadth first', () => {
+    let node = new Node(1);
+    let tree3 = new BT(node);
+    let node2 = new Node(2);
+    node.left=node2;
+    let node3 = new Node(3);
+    node.right=node3;
+    let node4 = new Node(4);
+    node2.left=node4;
+    let node5 = new Node(5);
+    node2.right=node5;
+    let node6 = new Node(6);
+    node3.left=node6;
+    let node7 = new Node(7);
+    node3.right=node7;
+    let output = [1, 2, 3, 4, 5, 6, 7];
+    expect(tree3.breadthFirst()).toEqual(output);
+  });
 
 });
 describe('testing Binary search tree', () => {

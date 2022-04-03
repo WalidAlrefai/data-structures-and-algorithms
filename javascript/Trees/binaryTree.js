@@ -1,5 +1,6 @@
 'use strict';
 const Node = require('./node');
+const Queue = require('../stackAndQeueu/Queue');
 class binaryTree {
   constructor(root = null) {
     this.root = root;
@@ -49,7 +50,27 @@ class binaryTree {
     }
     return max;
   }
+  breadthFirst() {
+    let queue = new Queue();
+    let array = [];
+    queue.enqueue(this.root);
+    while (queue.length > 0) {
+      let current = queue.dequeue();
+      array.push(current.value);
+      if (current.left) {
+        queue.enqueue(current.left);
+      }
+      if (current.right) {
+        queue.enqueue(current.right);
+      }
+    }
+    return array;
+  }
 }
+
+
+
+
 class BST extends binaryTree {
   constructor() {
     super();
@@ -97,6 +118,7 @@ class BST extends binaryTree {
     }
     return false;
   }
+
 }
 module.exports = {
   BT: binaryTree,
