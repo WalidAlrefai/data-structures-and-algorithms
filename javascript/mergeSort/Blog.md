@@ -58,6 +58,8 @@ in last step check the privious conditon for final lift and final right return s
 ![](./assest/m3.png)
 
 # Efficency
-Time: O(n^2) The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
+Time: O(nlogn)
 
-Space: O(1) No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
+Overall time complexity of Merge sort is O(nLogn). It is more efficient as it is in worst case also the runtime is O(nlogn)
+
+Space: The space complexity of Merge sort is O(n). This algorithm takes a lot of space.
