@@ -7,10 +7,10 @@ class binaryTree {
   }
   preOrder() {
     let arr = [];
-    const preOrderRec = (node) => {
-      arr.push(node.value);
-      if (node.left !== null) { preOrderRec(node.left); }
-      if (node.right !== null) { preOrderRec(node.right); }
+    const preOrderRec = (Node) => {
+      arr.push(Node.value);
+      if (Node.left !== null) { preOrderRec(Node.left); }
+      if (Node.right !== null) { preOrderRec(Node.right); }
     };
     preOrderRec(this.root);
     return arr;
