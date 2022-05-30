@@ -23,7 +23,7 @@ describe('Graph', () => {
     graph.addVertex('A');
     graph.addVertex('B');
     graph.addVertex('C');
-    expect(graph.getVertexes()).toEqual(['A', 'B', 'C']);
+    expect(graph.getVertices()).toEqual(['A', 'B', 'C']);
   });
   // testing getNeighbors function
   it('getNeighbors', () => {
@@ -59,5 +59,24 @@ describe('Graph', () => {
   it('empty graph', () => {
     const graph = new Graph();
     expect(graph.getNeighbors('A')).toBe(null);
+  });
+  it('breadth first', () => {
+    const graph = new Graph();
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addVertex('E');
+    graph.addEdge('A', 'B');
+    graph.addEdge('A', 'C');
+    graph.addEdge('B', 'D');
+    graph.addEdge('C', 'E');
+    expect(graph.breadthFirst('A')).toEqual([
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+    ]);
   });
 });
