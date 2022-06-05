@@ -79,4 +79,24 @@ describe('Graph', () => {
       'E',
     ]);
   });
+  it('pre-order depth-first traversal order', ()=>{
+    const graph = new Graph();
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addVertex('D');
+    graph.addVertex('E');
+    graph.addVertex('H');
+    graph.addVertex('F');
+
+    graph.addEdge('A', 'B');
+    graph.addEdge('A', 'C');
+    graph.addEdge('A','F');
+    graph.addEdge('B', 'D');
+    graph.addEdge('D','H');
+    graph.addEdge('C', 'E');
+    graph.addEdge('F', 'E');
+    expect(graph.depthFirst('A')).toEqual(['A', 'B', 'D','H', 'C', 'E','F']);
+  });
 });
